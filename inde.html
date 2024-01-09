@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alcohol Subcommittee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <style>
+        :root {
+    --dark-blue-color: #003479;
+    --light-blue-color: #639EC8;
+    --yellow-color: #FBDE42;
+    --grey-color: #C4C7C8;
+    --brown-color: #9D986D;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+a:-webkit-any-link {
+    color: lightblue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+}
+
+.wrapper {
+    max-width: 945px;
+    margin: 0 auto 12px;   
+    position: relative;
+}
+
+.topwords {
+    margin-bottom: 10px;
+}
+
+mark {
+    color:#dd0000;
+    background: none;
+}
+
+.topsection {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wordsonleft p {  
+    width: 569px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.wordsred {
+    width: 950px;
+}
+
+.pictureonright img {
+    width: 350px;
+    height: 282px; 
+    margin-top: 20px;
+    border-radius: 15px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.resoursebutton {
+    
+    width: 945px;
+    height: 73px;
+    margin: auto;
+    border: 1px solid black;
+    margin-bottom: 26px;
+    text-align: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background: #003479;
+    border-radius: 15px;
+}
+
+.btntxt {
+    font-family: 'Arial';
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: white;
+}
+
+
+.squarebuttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.res {
+    background: #639EC8;
+    width: 470px;
+    height: 81px;
+    margin-bottom: 26px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 10px;
+    color: #FFFFFF;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.freeonlinebutton {
+    width: 945px;
+    height: 73px;
+    margin: auto;
+    border: 1px solid black;
+    margin-bottom: 26px;
+    text-align: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background: #003479;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.freeonlinebutton.btntxt {
+    font-family: 'Arial';
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: white;
+}
+
+.bottomthreesquares {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.bottomthreesquares2 {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.square {
+    width: 306px;
+    height: 123px;
+    padding: 10px;
+    background: #639EC8;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    cursor: pointer;
+    border-radius: 15px;
+    color: #FFFFFF;
+}
+
+.square2 {
+    width: 304px;
+    height: 109px;
+    padding: 10px;
+    background: #639EC8;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    cursor: pointer;
+    border-radius: 15px;
+    color: #FFFFFF;
+}
+
+.resoursebutton:hover {
+    transform: scale(1.02) 
+}
+
+.res:hover {
+    transform: scale(1.02)
+}
+
+.freeonlinebutton:hover {
+    transform: scale(1.02)
+}
+
+.square:hover {
+    transform: scale(1.02)
+}
+
+.square2:hover {
+    transform: scale(1.02)
+}
+
+.pictureonright img:hover {
+    transform: scale(1.02)
+}
+
+button {
+    background: none;
+    text-align:left;
+    padding: 0px;
+    border-width: 0px;
+    border-style: none;
+    border-color: none;
+    border-image: none;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#myDIV {
+    width: 825px;
+    height: 198px;
+    background: rgba(251, 222, 66, 0.8);
+    border-radius: 32px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    padding: 19px 61px;
+    display: none;
+    margin: auto;
+}
+
+#myDIV2 {
+    width: 825px;
+    height: 197px;
+    background: rgba(251, 222, 66, 0.8);
+    border-radius: 32px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    padding: 19px 61px;
+    display: none;
+    margin: auto;
+}
+
+#myDIV3 {
+    width: 825px;
+    height: 234px;
+    background: rgba(251, 222, 66, 0.8);
+    border-radius: 32px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    padding: 19px 61px;
+    display: none;
+    margin: auto;
+}
+
+#myDIV4 {
+    width: 825px;
+    height: 219px;
+    background: rgba(251, 222, 66, 0.8);
+    border-radius: 32px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    padding: 19px 61px;
+    display: none;
+    margin: auto;
+}
+
+#myDIV5 {
+    width: 825px;
+    height: 234px;
+    background: rgba(251, 222, 66, 0.8);
+    border-radius: 32px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    padding: 19px 61px;
+    display: none;
+    margin: auto;
+}
+
+#myDIV6 {
+    width: 825px;
+    height: 215px;
+    background: rgba(251, 222, 66, 0.8);
+    border-radius: 32px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    padding: 19px 61px;
+    display: none;
+    margin: auto;
+}
+
+#myDIV7 {
+    width: 825px;
+    height: 234px;
+    background: rgba(251, 222, 66, 0.8);
+    border-radius: 32px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    padding: 19px 61px;
+    display: none;
+    margin: auto;
+}
+
+#myDIV8 {
+    width: 825px;
+    height: 541px;
+    background: rgba(251, 222, 66, 0.8);
+    border-radius: 32px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    padding: 19px 61px;
+    display: none;
+    margin: auto;
+}
+
+#myDIVc1 {
+    width: 825px;
+    height: 246px;
+    background: rgba(251, 222, 66, 0.8);
+    border-radius: 32px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    padding: 19px 61px;
+    display: none;
+    margin: auto;
+}
+
+#myDIVc2 {
+    width: 825px;
+    height: 247px;
+    background: rgba(251, 222, 66, 0.8);
+    border-radius: 32px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    padding: 19px 61px;
+    display: none;
+    margin: auto;
+}
+
+#myDIVc3 {
+    width: 825px;
+    height: 234px;
+    background: rgba(251, 222, 66, 0.8);
+    border-radius: 32px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    padding: 19px 61px;
+    display: none;
+    margin: auto;
+}
+.square a {
+    color: white;
+    text-decoration: none; /* Optional: Removes underline */
+  }
+    </style>
+    <!--Top section-->
+    <div class="topwords">
+        <div class="wrapper">
+            <div class="topsection">
+                <div class="wordsonleft">
+                    <p>The Alcohol Epidemiology Subcommittee works closely with state Alcohol Epidemiologists and the CDC Alcohol Program and welcomes other members interested in alcohol surveillance issues. This subcommittee was formed to address critical
+                        alcohol epidemiology details to improve public health surveillance such as, data inventory, data development, indicator development, data analyses, outreach to other agencies, and support for prevention activities
+                        <br /><br /> For more information about the Alcohol Subcommittee and its activities, please contact <a href="mailto:clingwall@cste.org">Cailyn Lingwall</a>. <a href="https://www.cste.org/page/cross-cutting-overview">Click here</a>                        to view other Injury, Substance Use and Mental Health Steering Committee Activities..
+                    </p>
+
+                </div>
+                <div class="pictureonright">
+                    <img alt="" src="https://www.cste.org/resource/resmgr/infectiousdisease/bottlesalcohol1_1.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Word box section-->
+    <div class="boxes">
+
+        <div class="wrapper">
+
+        </div>
+
+        <!--Resource button-->
+        <div class="wrapper">
+            <div class="freeonlinebutton" onclick="myFunction1c()">
+                <div class="btntxt">
+                    Alcohol Subcommittee Data Tool </div>
+            </div>
+           
+        </div>
+        <div class="wrapper">
+            <div id="myDIVc1" onclick="closewordsc1()">
+                <b>Alcohol Subcommittee Data Tool</b>
+                <br/>
+                <br />
+                    <a href="https://www.cste.org/resource/resmgr/2016billets/CSTE_Alcohol_Subcommittee_D.xlsx" target="_blank" style="color: rgb(0, 0, 0);">Alcohol Subcomittee Data Tool link</a>
+                </b>
+                
+               
+                <br /><br />
+                This directory of data sources and surveys are used frequently for applied public health practitioners to monitor alcohol-related indicators in the United States. The datasets and sources
+                included in the spreadsheet linked below were chosen based on the alcohol indicators available and their reliability for public health surveillance. Users can download this list and add their own sources and notes as applicable.
+            </div>
+        </div>
+
+        <!--Popup words-->
+
+
+        <div class="wrapper">
+            <div id="myDIV2" onclick="closewords2()">
+                <b>ED Screening Tools</b><br /><br /> Screening for alcohol use in emergency departments is an effective strategy to reduce harms related to excessive drinking but is underutilized. This one-pager and slides describe the results of an
+                assessment of emergency physicians’ practices around alcohol screening and brief intervention (ASBI) and resources for implementing validated alcohol screening tools in clinical settings.<br />
+                <ul>
+                    <li><a href="https://www.cste.org/resource/resmgr/cste_alcohol_subcommittee_resources/ed_screening_v3.pdf" target="_blank">Screening for Alcohol Consumption in Emergency Departments (PDF)</a></li>
+                    <li><a href="https://www.cste.org/resource/resmgr/2019ps/final/Screening_for_Alcohol_Consum.pdf" target="_blank">Screening for Alcohol Consumption in Emergency Departments (Slides)</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!--Middle Squares-->
+    <div class="wrapper">
+        <div class="squarebuttons">
+
+
+
+
+
+            <div onclick="myFunction2k()">
+                <div class="res 2">
+                    <div class="restxt2">
+                        ED Screening Tools </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+        <!-- Free online training button-->
+        <div class="wrapper">
+            <div class="freeonlinebutton" onclick="myFunction1c()">
+                <div class="btntxt">
+                    Alcohol Morbidity: Developmental Indicator </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div id="myDIVc1" onclick="closewordsc1()">
+                <b>Alcohol Morbidity: Developmental Indicator</b><br /><br /> The CSTE Alcohol Subcommittee, in partnership with CDC, developed the following How to Guide on estimating hospitalizations related to alcohol in the United States using ICD-10-CM
+                codes. This guide is designed to serve as a resource for state and local epidemiologists who are interested in monitoring the burden of excessive alcohol use on the hospital system or in adding to the surveillance practices of alcohol-related
+                harms in their jurisdiction. This indicator has several limitations (see the section “Suggestions for Use and Limitations”) and should be considered developmental and used with the limitations in mind. Please see below for the links to
+                each component of the guide. Note that the Excel spreadsheet and SAS code are also included within the PDF.
+            </div>
+        </div>
+
+
+        <!--Three bottom squares-->
+        <div class="wrapper">
+            <div class="bottomthreesquares">
+
+
+                <div class="square left">
+                    <a href="https://www.cste.org/resource/resmgr/2017ps/CSTE_How_To_Guide_Alcohol_Ma.pdf" target="_blank">Developmental Indicator: Hospitalizations Related to Alcohol in the United States using ICD-10-CM codes (PDF)</a> </div>
+
+                <button>
+                    </button>
+                <div class="square middle">
+                    <a href="https://cste.sharefile.com/share/view/s4f075ace6e984a91a5c8df7c71014579" target="_blank">Spreadsheet to calculate counts, crude rates, and age-adjusted rates (Excel Workbook)</a> </div>
+
+                <button>
+                    </button>
+                <div class="square right">
+                    <a href="https://cste.sharefile.com/share/view/s50bba143803745ffbe7af3090ffbfbf8" target="_blank">Generic SAS Programming for Generating Indicator with ICD-10-CM Codes within Any Discharge Diagnosis Field (SAS file)</a></div>
+
+            </div>
+
+        </div>
+    </div>
+    <script type="text/javascript">
+        /*Funtions to bring up words on click*/
+function myFunction1k() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function myFunction2k() {
+  var x = document.getElementById("myDIV2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function myFunction3() {
+var x = document.getElementById("myDIV3");
+if (x.style.display === "none") {
+  x.style.display = "block";
+} else {
+  x.style.display = "none";
+}
+}
+
+function myFunction4() {
+var x = document.getElementById("myDIV4");
+if (x.style.display === "none") {
+  x.style.display = "block";
+} else {
+  x.style.display = "none";
+}
+}
+
+function myFunction5(){
+var x = document.getElementById("myDIV5");
+if (x.style.display === "none") {
+  x.style.display = "block";
+} else {
+  x.style.display = "none";
+}
+}
+
+function myFunction6(){
+var x = document.getElementById("myDIV6");
+if (x.style.display === "none") {
+  x.style.display = "block";
+} else {
+  x.style.display = "none";
+}
+}
+
+function myFunction7(){
+var x = document.getElementById("myDIV7");
+if (x.style.display === "none") {
+  x.style.display = "block";
+} else {
+  x.style.display = "none";
+}
+}
+
+function myFunction8(){
+var x = document.getElementById("myDIV8");
+if (x.style.display === "none") {
+  x.style.display = "block";
+} else {
+  x.style.display = "none";
+} 
+}
+
+function myFunction1c(){
+var x = document.getElementById("myDIVc1");
+if (x.style.display === "none") {
+  x.style.display = "block";
+} else {
+  x.style.display = "none";
+}
+}
+
+function myFunction2c(){
+var x = document.getElementById("myDIVc2");
+if (x.style.display === "none") {
+  x.style.display = "block";
+} else {
+  x.style.display = "none";
+}
+}
+
+function myFunction3c(){
+var x = document.getElementById("myDIVc3");
+if (x.style.display === "none") {
+  x.style.display = "block";
+} else {
+  x.style.display = "none";
+}
+}
+
+/*Close words*/
+function closewords(){
+var x = document.getElementById("myDIV");
+if (x.style.display = "block") {
+  x.style.display = "none";
+}
+}
+
+function closewords2(){
+var x = document.getElementById("myDIV2");
+if (x.style.display = "block") {
+  x.style.display = "none";
+}
+}
+
+function closewords3() {
+var x = document.getElementById("myDIV3");
+if (x.style.display = "block") {
+  x.style.display = "none";
+}
+}
+
+function closewords4() {
+var x = document.getElementById("myDIV4");
+if (x.style.display = "block") {
+  x.style.display = "none";
+}
+}
+
+function closewords5() {
+var x = document.getElementById("myDIV5");
+if (x.style.display = "block") {
+  x.style.display = "none";
+}
+}
+
+function closewords6() {
+var x = document.getElementById("myDIV6");
+if (x.style.display = "block") {
+  x.style.display = "none";
+}
+}
+
+function closewords7() {
+var x = document.getElementById("myDIV7");
+if (x.style.display = "block") {
+  x.style.display = "none";
+}
+}
+
+function closewords8() {
+var x = document.getElementById("myDIV8");
+if (x.style.display = "block") {
+  x.style.display = "none";
+}
+}
+
+function closewordsc1() {
+var x = document.getElementById("myDIVc1");
+if (x.style.display = "block") {
+  x.style.display = "none";
+}
+}
+
+function closewordsc2() {
+var x = document.getElementById("myDIVc2");
+if (x.style.display = "block") {
+  x.style.display = "none";
+}
+}
+
+function closewordsc3() {
+var x = document.getElementById("myDIVc3");
+if (x.style.display = "block") {
+  x.style.display = "none";
+}
+}
+    </script>
+
+
+</body>
+
+</html>
